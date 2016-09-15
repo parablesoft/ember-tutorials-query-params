@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+{{outlet}}
+
+
+{{link-to "In Production" "dashboard" (query-params status="In Production")}}
+{{link-to "On Hold" "dashboard" (query-params status="On Hold")}}
+{{link-to "Shipped" "dashboard" (query-params status="Shipped")}}
+<hr>
+{{status}}
+<hr/>
+Model<br/>
+{{#each model as |order|}}
+	{{order.id}}
+{{/each}}
